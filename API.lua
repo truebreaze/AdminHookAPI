@@ -317,8 +317,9 @@ function AdminHookAPI:SpawnServerEntity(Entity)
 
     }
      if not Entity then print("No Valid Entity Given") return end
-     local args = {
-	Entity,
+
+local args = {
+	tostring(Entity), --no clue what's happening here.
 	{}
 }
 APR:FireServer(unpack(args))
