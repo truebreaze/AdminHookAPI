@@ -4,7 +4,7 @@ local APR = game:GetService("ReplicatedStorage"):WaitForChild("RemotesFolder"):W
 
 
 --PLAYER 
-function AdminHookAPI.Kill(Player)
+function AdminHookAPI:Kill(Player)
     if not Player then print("No player arg was given") return end
 local args = {
 	"KillPlayer",
@@ -17,7 +17,7 @@ local args = {
 APR:FireServer(unpack(args))
 end
 
-function AdminHookAPI.Explode(Player)
+function AdminHookAPI:Explode(Player)
        if not Player then print("No player arg was given") return end
 local args = {
 	"ExplodePlayer",
@@ -30,7 +30,7 @@ local args = {
 APR:FireServer(unpack(args))
 end
 
-function AdminHookAPI.Fling(Player)
+function AdminHookAPI:Fling(Player)
           if not Player then print("No player arg was given") return end
 local args = {
 	"FlingPlayer",
@@ -43,7 +43,7 @@ local args = {
 APR:FireServer(unpack(args))
 end
 
-function AdminHookAPI.Heal(Player)
+function AdminHookAPI:Heal(Player)
     if not Player then print("No player arg was given") return end
 local args = {
 	"HealPlayer",
@@ -56,7 +56,7 @@ local args = {
 APR:FireServer(unpack(args))
 end
 
-function AdminHookAPI.Revive(Player)
+function AdminHookAPI:Revive(Player)
     if not Player then print("No player arg was given") return end
 local args = {
 	"RevivePlayer",
@@ -70,7 +70,7 @@ APR:FireServer(unpack(args))
 end
 
 --PLAYER STATS
-function AdminHookAPI.SetStat(Player, MH, AS, SS, SB, H, AJ, GM)
+function AdminHookAPI:SetStat(Player, MH, AS, SS, SB, H, AJ, GM)
     if Player == nil then return end --Player, duh
     if MH == nil then return end -- Max Health
     if AS == nil then return end -- Allow Sliding
@@ -97,7 +97,7 @@ function AdminHookAPI.SetStat(Player, MH, AS, SS, SB, H, AJ, GM)
 APR:FireServer(unpack(args))
 end
 
-function AdminHookAPI.Gold(Player, Amount, Add)
+function AdminHookAPI:Gold(Player, Amount, Add)
      if Player == nil then return end --Player
     if Amount == nil then return end -- Amount of Gold
     if Add == nil then return end -- if true, will add to instead of set to
@@ -115,7 +115,7 @@ local args = {
 APR:FireServer(unpack(args))
 end
 
-function AdminHookAPI.AddItem(Player, Item)
+function AdminHookAPI:AddItem(Player, Item)
     if Player == nil then return end --Player
     if Item == nil then return end -- Item, must be valid
         --EXAMPLE LIST
@@ -189,7 +189,7 @@ local args = {
 APR:FireServer(unpack(args))
 end
 
-function AdminHookAPI.AddItems(Player, Item)
+function AdminHookAPI:AddItems(Player, Item)
     if Player == nil then return end --Player
     if Item == nil then return end -- Items in a table, must be valid
         --EXAMPLE LIST
@@ -263,7 +263,7 @@ APR:FireServer(unpack(args))
 end
 
 
-function AdminHookAPI.SpawnPlayerEntity(Player, Entity)
+function AdminHookAPI:SpawnPlayerEntity(Player, Entity)
           if not Player then print("No player arg was given") return end
           if not Entity then print("No Valid Entity Given") return end
           local TempConverted
@@ -296,7 +296,7 @@ local args = {
 APR:FireServer(unpack(args))
 end
 
-function AdminHookAPI.SpawnServerEntity(Entity)
+function AdminHookAPI:SpawnServerEntity(Entity)
     --EXAMPLE LIST
     local ValidList = {
         "Rush",
@@ -324,7 +324,7 @@ function AdminHookAPI.SpawnServerEntity(Entity)
 APR:FireServer(unpack(args))
 end
 
-function AdminHookAPI.SpawnCustomEntity(FogImage,FaceImage,FogColor,FarSound,LightColor,CloseSound,EnemySpeed,EnemyDelay,EnemyDamage,EnemyRebounds)
+function AdminHookAPI:SpawnCustomEntity(FogImage,FaceImage,FogColor,FarSound,LightColor,CloseSound,EnemySpeed,EnemyDelay,EnemyDamage,EnemyRebounds)
     --I AM NOT GOING TO CHECK EVERY SINGLE VARIABLES IN THIS COMMAND, NO!!!!
 local args = {
 	"Spawn Custom Entity",
@@ -344,7 +344,7 @@ local args = {
 APR:FireServer(unpack(args))
 end
 
-function AdminHookAPI.BreakLights(LightNumber, AllLights)
+function AdminHookAPI:BreakLights(LightNumber, AllLights)
     if LightNumber == nil then LightNumber = 500 end
     if AllLights == nil then AllLights = true end
 local args = {
@@ -357,7 +357,7 @@ local args = {
 APR:FireServer(unpack(args))
 end
 
-function AdminHookAPI.FlickerLights(LightNumber, Duration, AllLights)
+function AdminHookAPI:FlickerLights(LightNumber, Duration, AllLights)
     if LightNumber == nil then LightNumber = 100 end
     if Duration == nil then Duration = 1.2 end
     if AllLights == nil then AllLights = true end
@@ -373,3 +373,4 @@ APR:FireServer(unpack(args))
 end
 
 return AdminHookAPI; 
+
