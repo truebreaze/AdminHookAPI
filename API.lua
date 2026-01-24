@@ -286,7 +286,7 @@ function AdminHookAPI:SpawnPlayerEntity(Player, Entity)
     if TempConverted == nil then print("No Valid Entity Given") return end
 
 local args = {
-	TempConverted,
+	tostring(TempConverted),
 	{
 		Players = {
 			Player = Player.Name
