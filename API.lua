@@ -373,4 +373,10 @@ local args = {
 APR:FireServer(unpack(args))
 end
 
+function AdminHookAPI:OnNewRoom(callback) --Credit to Alexplayrus2, comes from SimpleDoorAPI
+workspace.CurrentRooms.ChildAdded:Connect(function()
+callback()
+end)
+end
+
 return AdminHookAPI; 
