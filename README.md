@@ -41,7 +41,7 @@ With AdminHookAPI, you can:
 -   Execute Admin Panel actions via code
 -   Spawn server and client entities
 -   Modify player stats
--   Give developer / invalid items (Lotus, LotusPetal, CandyBag, Candy)
+-   Give developer / invalid items (Lotus, LotusPetal, CandyBag, Candy, Buddy)
 -   Spawn AdminPanel entities (Supports Dev Entities, like Bramble and Groundskeeper)
 -   Control lighting
 -   Handle room events
@@ -191,8 +191,9 @@ AdminHookAPI:SpawnServerEntity("Rush")
 
 ------------------------------------------------------------------------
 
-## ⚠ Disclaimer
+## ⚠ Disclaimer & Extras
 
 This API is intended for modding purposes in environments where the
 Admin Panel is enabled.\
-Use responsibly.
+This is of course Open-source, feel free to copy it and integrate it into your own API! (Please, credit me :3).\
+
