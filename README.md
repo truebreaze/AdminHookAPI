@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="assets/icon2K.png" width="250" alt="AdminHookAPI Icon">
+</p>
+
+
 # AdminHookAPI
 
 ## 📌 Overview
