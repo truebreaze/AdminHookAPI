@@ -202,3 +202,6 @@ This API is intended for modding purposes in environments where the
 Admin Panel is enabled.\
 This is of course Open-source, feel free to copy it and integrate it into your own API! (Please, credit me :3).\
 
+I recommend using the "Custom Modifier" project (https://github.com/iimateiYT/Custom-Modifiers?tab=readme-ov-file) by iimateiYT with the AdminHookAPI if you wish to do custom modifiers!
+
+
