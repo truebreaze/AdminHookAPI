@@ -379,4 +379,16 @@ callback()
 end)
 end
 
+function AdminHookAPI:OnWorkspaceNewChild(callback) --Checks for a new child in Workspace, entities and glowsticks spawn there
+workspace.ChildAdded:Connect(function(child)
+callback(child)
+end)
+end
+
+function AdminHookAPI:OnWorkspaceRemovedChild(callback) --Checks for a child that was removed in Workspace,like entities and glowsticks
+workspace.ChildRemoved:Connect(function(child)
+callback(child)
+end)
+end
+
 return AdminHookAPI; 
